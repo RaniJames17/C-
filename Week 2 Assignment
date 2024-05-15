@@ -34,3 +34,51 @@ class Eligibility
         }
     }
 }
+
+/*Exercise 4: Student's Grade Calculator
+Objective: To calculate and format output.
+Task:
+• In Visual Studio, create a new Console Application.
+• Program should read a student’s name and marks in three subjects.
+• Calculate the total and average marks.
+• Display the student's name, total marks, and average in a formatted manner.
+• Compile and run your application.
+*/
+
+using System;
+
+namespace GradeCalculator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Prompt the user to enter student's name
+            Console.Write("Enter student's name: ");
+            string name = Console.ReadLine();
+
+            // Prompt the user to enter marks in three subjects
+            Console.Write("Enter marks in Subject 1: ");
+            int subject1 = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter marks in Subject 2: ");
+            int subject2 = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter marks in Subject 3: ");
+            int subject3 = int.Parse(Console.ReadLine());
+
+            // Calculate total marks
+            int totalMarks = subject1 + subject2 + subject3;
+
+            // Calculate average marks
+            double averageMarks = (double)totalMarks / 3;
+
+            // Display student's name, total marks, and average marks
+            Console.WriteLine("\nStudent Name: " + name);
+            Console.WriteLine("Total Marks: " + totalMarks);
+            Console.WriteLine("Average Marks: " + averageMarks.ToString("0.00"));
+
+            Console.ReadLine(); // Keep the console window open
+        }
+    }
+}
