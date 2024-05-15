@@ -1,0 +1,31 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        try
+        {
+            Console.Write("Enter your age: ");
+            int age = Convert.ToInt32(Console.ReadLine());
+
+            if (age >= 65 || age < 18)
+            {
+                Console.WriteLine("You are eligible for a Go-train discount.");
+            }
+            else
+            {
+                Console.WriteLine("You are not eligible for a Go-train discount.");
+            }
+        }
+        catch(FormatException ex)
+        {
+            Console.WriteLine("Please enter a valid value as Age");
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine("Error Occured. Please retry");
+        }
+  }
+
+}
