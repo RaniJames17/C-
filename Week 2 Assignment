@@ -6,6 +6,7 @@ class Program
     {
         try
         {
+            //Input and accept an integer value as age
             Console.Write("Enter your age: ");
             int age = Convert.ToInt32(Console.ReadLine());
 
