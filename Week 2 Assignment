@@ -78,7 +78,7 @@ namespace GradeCalculator
             Console.WriteLine("Total Marks: " + totalMarks);
             Console.WriteLine("Average Marks: " + averageMarks.ToString("0.00"));
 
-            Console.ReadLine(); // Keep the console window open
+            Console.ReadLine();
         }
     }
 }
