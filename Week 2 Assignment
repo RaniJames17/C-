@@ -1,32 +1,36 @@
+//Exercise 3: Eligibility for Go-Train Discount
 using System;
 
-class Program
+class Eligibility
 {
     static void Main()
     {
+        //Exception handling for invalid numbers and other errors
         try
         {
-            //Input and accept an integer value as age
+            //accept an integer as age
             Console.Write("Enter your age: ");
             int age = Convert.ToInt32(Console.ReadLine());
 
-            if (age >= 65 || age < 18)
+            //condition to check if the entered age is eligible
+            if (age >= 60 || age < 16)
             {
-                Console.WriteLine("You are eligible for a Go-train discount.");
+                Console.WriteLine("Eligible for the Go-train discount");
             }
             else
             {
-                Console.WriteLine("You are not eligible for a Go-train discount.");
+                Console.WriteLine("Not eligible for the Go-train discount");
             }
         }
+        //Catch exception for invalid numbers
         catch(FormatException ex)
         {
             Console.WriteLine("Please enter a valid value as Age");
         }
+        //Catch other exceptions
         catch(Exception ex)
         {
             Console.WriteLine("Error Occured. Please retry");
         }
-  }
-
+    }
 }
