@@ -29,6 +29,55 @@ class ReverseString
         }
     }
 }
+//Exercise 2: User Authentication System
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace week_2_assignment
+{
+    internal class user_authanctication
+    {
+        static void Main()
+        {   //define constant for userid and password
+
+            const string correct_UserId = "admin";
+            const string correct_Password = "system";
+            //declare attempts in integer
+            int attempts = 0;
+            //use while loop for checking attempts
+            while (attempts < 3)
+            {
+                Console.Write("Enter user ID: ");
+                string userId = Console.ReadLine();
+
+                Console.Write("Enter password: ");
+                string password = Console.ReadLine();
+
+                if (userId == correct_UserId && password == correct_Password)//use if-else condition
+                {
+                    Console.WriteLine("Login successful!");
+                    break;
+                }
+                else
+                {
+                    attempts++;
+                    Console.WriteLine("Credentials are incorrect. Please try again.");
+                }
+            }
+            if (attempts == 3)//if attempts are 3 then display error
+            {
+                Console.WriteLine("Sorry, you have exceeded the maximum number of attempts.");
+            }
+
+            Console.ReadLine();//for stop the console
+        }
+    }
+}
+                               
 //Exercise 3: Eligibility for Go-Train Discount
 using System;
 
